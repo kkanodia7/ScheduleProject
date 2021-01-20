@@ -1,0 +1,14 @@
+Progress
+
+The code has been finished, with most of the goals of the proposal being met. These include:
+- Being able to add and remove tasks
+- Viewing all entered tasks with nice formatting
+- Exporting schedule to text file with nice formatting
+- Saving tasks between runs
+- Importing a schedule via text file
+
+There were a few things I decided to change since then, such as:
+- Tasks no longer store due date; this info was irrelevant to the program and can be added into the description if the user wishes
+- Tasks do not have a "finish" method to clear them from the task list; this is instead handled outside the Task class
+
+Everything works and all errors are handled properly.

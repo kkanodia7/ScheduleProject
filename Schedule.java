@@ -271,6 +271,12 @@ public class Schedule {
                     tempTasks.add(t);
             }
             Collections.sort(tempTasks);
+            for (int i = 0; i < tempTasks.size() - 1; i++) {
+                if (tempTasks.get(i).getSchedTimeEnd().getMillis() > tempTasks.get(i+1).getSchedTime().getMillis()) {
+                    System.out.println(fileName + " contains overlapping tasks!");
+                    return;
+                }
+            }
             tasks.clear();
             tasks.addAll(tempTasks);
         } catch (FileNotFoundException e) {
